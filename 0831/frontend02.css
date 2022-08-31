@@ -1,0 +1,95 @@
+.hold {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.header_flex {
+  display: flex;
+  height: 80px;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  padding: 10px;
+  margin: 8px;
+}
+
+.header_flex > ul {
+  list-style: none;
+  display: flex;
+  align-items: flex-end;
+  margin: 0;
+  margin-left: auto;
+}
+
+.header_flex > ul > li > a {
+  margin-right: 10px;
+  font-weight: lighter;
+  color: gray;
+}
+
+.SSAFY_Home {
+  font-size: 40px;
+  justify-content: flex-start;
+  align-items: center;
+  font-weight: bold;
+  color: blueviolet;
+}
+
+main {
+  display: flex;
+  height: 500px;
+}
+
+main > div {
+  margin-right: 10px;
+}
+
+.flex_col {
+  display: flex;
+  flex-direction: column;
+}
+
+footer ul li {
+  margin-left: 10px;
+  font-size: 5px;
+  font-weight: lighter;
+  color: gray;
+}
+footer ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+
+.left_content {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 20%;
+}
+
+.right_content {
+  flex-basis: 80%;
+}
+
+.border {
+  border: 2px outset;
+  margin-bottom: 10px;
+}
+
+.main_content {
+  flex-basis: 32%;
+}
+
+.text_center {
+  text-align: center;
+}
+
+#submit_button {
+  color: aliceblue;
+  background-color: darkviolet;
+}

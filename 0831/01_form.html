@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div style="border-width:1px; width:10cm;height:10cm; border-style:solid; margin:0% auto">
+    <form action="" method="get" style="border-style:solid; width:50%; height: 50%;margin: auto">
+      <label for="name">이름</label><input type="text" name="username" id="name" placeholder="이름!" required> <br>
+      이메일 : <input type="email" name="email" id="" disabled><br>
+      성별 :
+      <input type="radio" name="gender" id="mgender" value="mgender"><label for="mgender">남</label>
+      <input type="radio" name="gender" id="fgender"value="fgender"><label for="fgender">여</label>
+      <br>
+      <input type="checkbox" name="hobby" id="swimming" value="swimming"><label for="swimming">수영</label>
+      <input type="checkbox" name="hobby" id="climming"value="climming"><label for="climming">암벽등반</label>
+      <br>
+      사는 곳 :
+      <select name="location" id="">
+        <option value="seoul">서울</option>
+        <option value="incheon">인천</option>
+        <option value="suwon">수원</option>
+        <option value="busan">부산</option>
+        <option value="jejejudodo">제주도</option>
+      </select>
+      <br>
+      <input type="hidden" name="type" value="a">
+      <input type="submit" value="전송1">
+      <input type="submit" value="전송2" formaction="other.do" formmethod="post">
+    </form>
+  </div>
+</body>
+</html>

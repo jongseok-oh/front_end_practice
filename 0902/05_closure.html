@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+
+    let greeting = "hello "
+    function hello(name){
+      let msg = greeting + name;
+
+      let inner = function(){
+        console.log(greeting);
+        console.log(msg);
+      }
+      //inner();
+      return inner;
+    }
+
+    let func1 = hello("김재환");
+    func1();
+    // wow 으메이징!
+
+    let func2 = hello("오종석");
+    func2();
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

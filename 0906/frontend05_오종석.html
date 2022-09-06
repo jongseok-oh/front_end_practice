@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>hw5</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      let tableBody;
+      let btn;
+      window.onload = () => {
+        tableBody = document.getElementById("tBody");
+        btn = document.getElementById("btn");
+        btn.addEventListener("click", async () => {
+          tableBody.innerHTML = "";
+          let res = await fetch("https://jsonplaceholder.typicode.com/users");
+          let data = await res.json();
+          for (let i = 0; i < 10; i++) {
+            let row = data[i];
+
+            let ttr = document.createElement("tr");
+
+            let id = document.createElement("td");
+            id.append(row.id);
+
+            let name = document.createElement("td");
+            name.append(row.name);
+
+            let phoneNum = document.createElement("td");
+            phoneNum.append(row.phone);
+
+            let homePage = document.createElement("td");
+            homePage.append(row.website);
+
+            ttr.append(id, name, phoneNum, homePage);
+
+            tableBody.append(ttr);
+          }
+        });
+      };
+    </script>
+  </head>
+  <body>
+    <div class="container mt-3">
+      <div class="d-grid">
+        <button type="button" class="btn btn-primary btn-block" id="btn">
+          사용자 정보 불러오기
+        </button>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>아이디</th>
+              <th>이름</th>
+              <th>전화번호</th>
+              <th>홈페이지</th>
+            </tr>
+          </thead>
+          <tbody id="tBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

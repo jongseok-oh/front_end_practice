@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    var myVar = "전역변수";
+
+    function myFunc(){
+      var myVar = "지역변수";
+      global = "나는??";
+      var test = 1;
+      var test = "a";
+
+      {
+        var count = 10;
+      }
+      console.log(myVar, global, count, test);
+    }
+
+    myFunc();
+    console.log(myVar, global);
+
+    // var는 전역과 지역 두개의 scope밖에 없다.
+    // stack의 영역 그딴거 없는 듯
+    // 진짜 근본 없네;;
+
+    let myLet = "전역변수Let"
+
+    function myFuncLet(){
+      let myLet = "지역변수Let";
+      global = "나는??zz";
+      let test = 1;
+      // let test = "a";
+      {
+        let count = 10;
+      }
+      console.log(myLet, global, test);
+    }
+
+    myFuncLet();
+    console.log(myVar, global);
+    
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

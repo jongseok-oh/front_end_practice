@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src = "math.js"></script>
+  <script>
+    function myFunc(a,b){
+      console.log(a,b);
+    }
+
+    myFunc();
+    myFunc(1);
+    myFunc(1,2);
+
+    function sumAll(){
+      let result =0;
+      for(const key in arguments){
+        result+=arguments[key];
+      }
+      console.log(result);
+    }
+
+    sumAll(0);
+    sumAll(1);
+    sumAll(1,2,3);
+
+    function process(value1, value2){
+      function small(x,y){return x<y?x:y;}
+      console.log(value1,value2);
+      return small(value1,value2);
+    }
+    console.log(process(10,20));
+    console.log(small(10,20));
+
+    function display(viewHandler){
+      let msg = "HelloWorld";
+      viewHandler(msg);
+    }
+
+    display(function (message){alert(message);});
+    display(function(message){
+      console.log(message);
+    })
+
+    // 함수 return
+    function createFunc(type){
+      if(type == "+")
+        return function(a,b){return a+b;}
+      else if(type == "-")
+        return function(a,b){return a-b;}
+    }
+
+    console.log(createFunc("+")(10,20));
+    let funcMinus = createFunc("-");
+    console.log(funcMinus(10,20));
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

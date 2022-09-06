@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+
+/*    let count = 0;
+
+    function counter(){
+      return ++count;
+    }
+    function xxx(){
+      ++count;
+    }
+    console.log(counter());
+    console.log(counter());
+    console.log(counter());*/
+    // 다른 곳에서 count가 불리기 싫다
+    
+    function counter(){
+      let count = 0;
+      return function() {return ++count;}
+    }
+
+    let myCounter = counter();
+
+    console.log(myCounter());
+    console.log(myCounter());
+    console.log(myCounter());
+    
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

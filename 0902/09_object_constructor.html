@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+
+    function Person(name, age){
+      this.name = name;
+      this.age = age;
+      this.increaseAge = function(){
+        this.age++;
+      }
+    }
+
+    let p1 = new Person("김재현",27);
+    console.log(p1.name, p1.age);
+
+    let p2 = new Person("오종석",26);
+    console.log(p2.name, p2.age);
+    p1.increaseAge();
+    
+    console.log(p1);
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
